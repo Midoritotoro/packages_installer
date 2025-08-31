@@ -4,7 +4,7 @@ $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $buildDir = (Get-Item $scriptDir).Parent.Parent.FullName
 
 # Path to packagesInstaller folder
-$packagesInstallerDir = Join-Path $buildDir "\build\packagesInstaller\"
+$packagesInstallerDir = Join-Path $buildDir "\packagesInstaller\"
 
 # Paths to virtual environment and activation script
 $venvPath = Join-Path $packagesInstallerDir "venv"
@@ -18,7 +18,7 @@ Function Create-PythonVenv {
 }
 
 Function Python-InstallRequirements {
-    $requirementsPath = Join-Path $buildDir "build\requirements.txt"
+    $requirementsPath = Join-Path $buildDir "\requirements.txt"
     Write-Host "Installing requirements from $requirementsPath..."
     python -m pip install -r $requirementsPath
 }
