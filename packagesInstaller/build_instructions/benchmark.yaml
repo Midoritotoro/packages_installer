@@ -1,0 +1,20 @@
+"cacheKey": ""
+"dependencies": []
+"directory": ""
+"installCommands": |2
+
+      git clone https://github.com/google/benchmark.git
+      cd benchmark
+
+      cmake -E make_directory "build"
+      cmake -DBENCHMARK_DOWNLOAD_DEPENDENCIES=on -DCMAKE_BUILD_TYPE=Release -S . -B "build"
+
+      cmake --build "build" --config Debug
+  release:
+      cmake --build "build" --config Release
+"libraryInformation": ""
+"libraryName": |-
+  benchmark
+"libraryVersion": |-
+  0
+"location": ""
