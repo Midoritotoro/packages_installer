@@ -1,3 +1,9 @@
+## Установка Python
+Запустите в cmd от имени администратора
+```
+install_python.bat
+```
+
 ## Использование
 ```
 python -m packagesInstaller --libraries benchmark, zlib
