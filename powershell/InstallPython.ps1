@@ -32,10 +32,9 @@ $Arguments += 'Include_tcltk="1"'
 $Arguments += 'Include_test="1"'
 $Arguments += 'Include_tools="1"'
 $Arguments += 'Include_launcher="1"'
-$Arguments += "/passive"
 
 # Install Python
-Start-Process $pythonNameLoc -ArgumentList $Arguments -Wait
+Start-Process $pythonNameLoc -ArgumentList $Arguments -Wait -Verb RunAs
 
 Function Get-EnvVariableNameList {
     [cmdletbinding()]

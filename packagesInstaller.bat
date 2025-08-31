@@ -8,7 +8,7 @@ for %%d in (%~dp0..) do set ParentDirectory=%%~fd
 echo ParentDirectory=%ParentDirectory%
 
 :callInstaller
-    PowerShell -NoProfile -ExecutionPolicy Bypass -File "%ParentDirectory%\build\powershell\InstallPackagesInstallerRequirements.ps1" -Verb Runas
+    PowerShell -NoProfile -ExecutionPolicy Bypass -File "%Directory%\powershell\InstallPackagesInstallerRequirements.ps1" -Verb Runas
     python -m packagesInstaller %*
 
 :eof
