@@ -42,7 +42,7 @@ echo Directory=%Directory%
 
  :startPackagesInstallation
      echo Installing Python packages...
-     PowerShell -NoProfile -ExecutionPolicy Bypass -File "%Directory%\build\powershell\InstallPackagesInstallerRequirements.ps1" -Verb Runas
+     PowerShell -NoProfile -ExecutionPolicy Bypass -File "%Directory%\powershell\InstallPackagesInstallerRequirements.ps1" -Verb Runas
 
 :eof
 popd

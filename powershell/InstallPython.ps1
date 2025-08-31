@@ -85,9 +85,9 @@ Function Add-EnvExtension {
     {
         $pathList.Add($pathExtToAdd)
         $returnPath = $pathList -join ";"
-        [System.Environment]::SetEnvironmentVariable('pathext', $returnPath, [System.EnvironmentVariableTarget]::Machine)
-        [System.Environment]::SetEnvironmentVariable('pathext', $returnPath, [System.EnvironmentVariableTarget]::Process)
-        [System.Environment]::SetEnvironmentVariable('pathext', $returnPath, [System.EnvironmentVariableTarget]::User)
+        [System.Environment]::SetEnvironmentVariable('PATHEXT', $returnPath, [System.EnvironmentVariableTarget]::Machine)
+        [System.Environment]::SetEnvironmentVariable('PATHEXT', $returnPath, [System.EnvironmentVariableTarget]::Process)
+        [System.Environment]::SetEnvironmentVariable('PATHEXT', $returnPath, [System.EnvironmentVariableTarget]::User)
         $message = "Path extension added to machine, process and user paths to include $pathExtToAdd"
     }
     else
@@ -115,9 +115,9 @@ Function Add-EnvPath {
     {
         $pathList.Add($pathToAdd)
         $returnPath = $pathList -join ";"
-        [System.Environment]::SetEnvironmentVariable('path', $returnPath, [System.EnvironmentVariableTarget]::Machine)
-        [System.Environment]::SetEnvironmentVariable('path', $returnPath, [System.EnvironmentVariableTarget]::Process)
-        [System.Environment]::SetEnvironmentVariable('path', $returnPath, [System.EnvironmentVariableTarget]::User)
+        [System.Environment]::SetEnvironmentVariable('PATH', $returnPath, [System.EnvironmentVariableTarget]::Machine)
+        [System.Environment]::SetEnvironmentVariable('PATH', $returnPath, [System.EnvironmentVariableTarget]::Process)
+        [System.Environment]::SetEnvironmentVariable('PATH', $returnPath, [System.EnvironmentVariableTarget]::User)
         $message = "Path added to machine, process and user paths to include $pathToAdd"
     }
     else
